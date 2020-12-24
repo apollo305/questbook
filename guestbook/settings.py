@@ -25,19 +25,20 @@ SECRET_KEY = ')&m@-@ijp6sicv_qdq892%4*kukz)_mt_a%%tupe*$u@=9w)4y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'web',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'web',
+    
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,6 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'
 # 登入後重新導向首頁 (預設會導向 /accounts/profile/)
+
+LOGOUT_REDIRECT_URL = '/'
+#

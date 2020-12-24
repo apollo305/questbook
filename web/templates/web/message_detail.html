@@ -7,4 +7,10 @@
   {{ message.subject }}<BR>
   <h2>內容</h2>
   {{ message.content|linebreaks }}<BR>
+
+
+  {% if user.is_authenticated %}
+    <a href="{% url 'msg_delete' message.id %}">刪除留言</a>
+  {% endif %}
+  
 {% endblock %}
